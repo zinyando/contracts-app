@@ -1,0 +1,143 @@
+<div class="w-full max-w-lg container mx-auto bg-white">
+  <div class="heading flex flex-col text-center pb-8">
+    <h1 class="text-blue-500 text-4xl">Terminate Contract</h1>
+    <p class="text-lg md:text-xl text-gray-700">Securely cancel your contract with Vertragslotse Kuendigen in under 2 minutes.</p>
+  </div>
+  <form role="form" aria-label="Cancelation Form" class="w-full max-w-lg" action="#">
+    <section id="personal-information" class="pb-10">
+      <h2 class="text-xl text-gray-600 font-bold border-b-2 mb-5 center"> Your Details</h2>
+
+      <div class="md:flex md:items-center mb-6">
+        <div class="sm:w-1 md:w-1/3 lg:w-1/3">
+          <label class="block text-gray-600 font-bold md:text-right mb-1 md:mb-0 pr-4" for="fullname">Full Name<span>*</span></label>
+        </div>
+        <div class="md:w-2/3">
+          <Input @required={{true}} class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-300 invalid:border-red-200"  id="fullname" @placeholder="Fullname" />
+        </div>
+      </div>
+
+      <div class="md:flex md:items-center mb-6">
+        <div class="sm:w-1 md:w-1/3 lg:w-1/3">
+          <label class="block text-gray-600 font-bold md:text-right mb-1 md:mb-0 pr-4" for="dob">Date of Birth<span>*</span></label>
+        </div>
+        <div class="md:w-2/3">
+          <Input type="date" @required={{true}} class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-300" id="dob" @name="fullname" @value="" @placeholder="Username" />
+        </div>
+      </div>
+
+      <div class="md:flex md:items-center mb-6">
+        <div class="sm:w-1 md:w-1/3 lg:w-1/3">
+          <label class="block text-gray-600 font-bold md:text-right mb-1 md:mb-0 pr-4" for="email">Email<span>*</span></label>
+        </div>
+        <div class="md:w-2/3">
+          <Input @required={{true}} class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-300" id="email" type="email" @name="email" @value="" @placeholder="Email Address" />
+        </div>
+      </div>
+
+      <div class="md:flex md:items-center mb-6">
+        <div class="sm:w-1 md:w-1/3 lg:w-1/3">
+          <label class="block text-gray-600 font-bold md:text-right mb-1 md:mb-0 pr-4" for="street-address">Street Address<span>*</span></label>
+        </div>
+        <div class="md:w-2/3">
+          <Input @required={{true}} class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-300" id="street-address" @name="fullname" @value="" @placeholder="Street Address" />
+        </div>
+      </div>
+
+      <div class="md:flex md:items-center mb-6">
+        <div class="sm:w-1 md:w-1/3 lg:w-1/3">
+          <label class="block text-gray-600 font-bold md:text-right mb-1 md:mb-0 pr-4" for="city">City<span>*</span></label>
+        </div>
+        <div class="md:w-2/3">
+          <Input @required={{true}} class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-300" id="city" @name="fullname" @value="" @placeholder="City" />
+        </div>
+      </div>
+
+      <div class="md:flex md:items-center mb-6">
+        <div class="sm:w-1 md:w-1/3 lg:w-1/3">
+          <label class="block text-gray-600 font-bold md:text-right mb-1 md:mb-0 pr-4" for="zip">Zip<span>*</span></label>
+        </div>
+        <div class="md:w-2/3">
+          <Input @required={{true}} class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-300" id="zip" @name="fullname" @value="" @placeholder="ZIP" />
+        </div>
+      </div>
+
+      <div class="md:flex md:items-center mb-6">
+        <div class="sm:w-1 md:w-1/3 lg:w-1/3">
+          <label class="block text-gray-600 font-bold md:text-right mb-1 md:mb-0 pr-4" for="phone-number">Phone Number</label>
+        </div>
+        <div class="md:w-2/3">
+          <Input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-300" id="phone-number" type="phone" @name="fullname" @value="" @placeholder="Phone Number" />
+        </div>
+      </div>
+    </section>
+
+    <section id="contract-information" class="pb-10">
+      <h2 class="text-xl text-gray-600 font-bold border-b-2 mb-5 center"> Contract Details</h2>
+      <div class="md:flex md:items-center mb-6">
+        <div class="sm:w-1 md:w-1/3 lg:w-1/3">
+          <label class="block text-gray-600 font-bold md:text-right mb-1 md:mb-0 pr-4" for="contract-type">Contract Type<span class="required">*</span></label>
+        </div>
+        <div class="md:w-2/3">
+          <div class="inline-block relative w-full text-gray-600">
+            <select
+              id="contract-type"
+              class="block appearance-none w-full bg-gray-200 border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+              <option>Which contract do you want to cancel?</option>
+              <option>Anti-virus software</option>
+              <option>Internet</option>
+              <option>Mobile Internet</option>
+              <option>Mobile</option>
+              <option>Web Services</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="md:flex md:items-center mb-6">
+        <div class="sm:w-1 md:w-1/3 lg:w-1/3">
+          <label class="block text-gray-600 font-bold md:text-right mb-1 md:mb-0 pr-4" for="username">Username<span class="required">*</span></label>
+        </div>
+        <div class="md:w-2/3">
+          <Input @required={{true}} class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-300" id="username"@name="fullname" @value="" @placeholder="Username" />
+        </div>
+      </div>
+      <div class="md:flex md:items-center mb-6">
+        <div class="sm:w-1 md:w-1/3 lg:w-1/3">
+          <label class="block text-gray-600 font-bold md:text-right mb-1 md:mb-0 pr-4" for="termination-date">Termination Date</label>
+        </div>
+        <div class="md:w-2/3">
+          <Input type="date" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-300" id="termination-date" @name="fullname" @value="" @placeholder="Username" />
+        </div>
+      </div>
+    </section>
+
+    <section id="termination-information" class="pb-5">
+      <h2 class="text-xl text-gray-600 font-bold border-b-2 mb-5 center"> Termination Text</h2>
+      <div class="md:flex md:items-center mb-6">
+        <div class="md:w-full">
+          <Input aria-label="termination title" type="text" @required={{true}} class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-300" @name="fullname" @value="Kündigung zum nächstmöglichen Zeitpunkt" @placeholder="Reference" />
+        </div>
+      </div>
+      <div class="md:flex md:items-center mb-6">
+        <div class="md:w-full">
+          <Textarea aria-label="termination text" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-300" 
+          @name="fullname"  @value="hiermit kündige ich meinen Webservices-Vertrag fristgerecht, hilfsweise zum nächstmöglichen Zeitpunkt. Bitte senden Sie mir eine schriftliche Bestätigung der Kündigung unter Angabe des Beendigungszeitpunktes zu.
+
+          Sofern Ihnen für den betreffenden Vertrag eine Einzugsermächtigung vorliegt, widerrufe ich diese zum Ablauf des Vertrages.
+
+          Jegliche Form der Kontaktaufnahme Ihrerseits zum Zweck der Rückwerbung ist nicht erwünscht und ich bitte freundlich darum, davon abzusehen.
+
+          Bitte überweisen Sie den restlichen Betrag auf mein Referenzkonto." cols="80" rows="15" @placeholder="Cancellation Instruction" />
+        </div>
+      </div>
+    </section>
+
+    <div class="flex justify-center pb-10">
+      <button role="button" aria-label="Continue & Create Preview" class="bg-green-600 hover:bg-green-500 text-white font-bold py-4 px-6 border border-green-600 rounded">Continue & Preview</button>
+    </div>
+  </form>
+</div>
