@@ -8,7 +8,7 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('vertragslotse-kuendigen');
-  this.route('vertragslotse-kuendigen-2');
+  this.route('index', { path: '/'});
 });
 
 export default Router;
